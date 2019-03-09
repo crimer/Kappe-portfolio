@@ -1,5 +1,5 @@
 const gulp         = require('gulp'),
-      sass         = require('gulp-sass'),
+      stylus       = require('gulp-stylus'),
       sourcemaps   = require('gulp-sourcemaps'),
       autoprefixer = require('gulp-autoprefixer'),
       browserSync  = require('browser-sync'),
@@ -18,12 +18,12 @@ const autoprefixerList = [
     'Opera >= 30'
 ];
 
-gulp.task('sass', function() {
+gulp.task('stylus', function() {
     return gulp
-        .src(config.assets.sass + '/app.sass')
+        .src(config.assets.stylus + '/app.styl')
         .pipe(plumber({ errorHandler: config.errorHandler }))
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'expanded',precision: 5}))
+        .pipe(stylus({outputStyle: 'expanded',precision: 5}))
         // .on('error', config.errorHandler)
         .pipe(autoprefixer({ browsers: ['> 1%', 'last 4 versions'], cascade: false }))
         .pipe(cleanCSS())
@@ -32,6 +32,6 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({ stream:true}))
 });
 
-gulp.task('sass_watch', function() {
-    gulp.watch(config.assets.sass + '/**/*.sass', ['sass']);
+gulp.task('stylus_watch', function() {
+    gulp.watch(config.assets.stylus + "/**/*.styl", ["stylus"]);
 });

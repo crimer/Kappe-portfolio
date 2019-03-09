@@ -6,6 +6,7 @@ const config = {
         all    : assetsPath,
         html   : assetsPath,
         sass   : assetsPath + '/sass',
+        stylus : assetsPath + '/stylus',  
         js     : assetsPath + '/js',
         img    : assetsPath + '/img',
         svg    : assetsPath + '/img/svg',

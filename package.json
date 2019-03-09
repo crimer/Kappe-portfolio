@@ -24,6 +24,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylus": "^2.7.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.1.0",
     "gulp-svgstore": "^7.0.1",
@@ -35,5 +36,7 @@
     "run-sequence": "^2.2.1",
     "through2": "^3.0.1",
     "wiredep": "^4.0.0"
-  }
+  },
+  "repository": "https://github.com/crimer/kappe-portfolio.git",
+  "author": "crimer <99nik.pro@gmail.com>"
 }

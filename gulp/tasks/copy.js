@@ -25,9 +25,9 @@ gulp.task('copy_js', function() {
         .pipe(gulp.dest(config.build.js))
 });
 
-gulp.task('copy_sass', function() {
+gulp.task('copy_stylus', function() {
     return gulp
-        .src(config.assets.sass + '/*.{sass,scss}')
+        .src(config.assets.stylus + '/*.styl')
         .pipe(gulp.dest(config.build.css))
 });
 
@@ -39,7 +39,7 @@ gulp.task('copy_img', function () {
 
 gulp.task('copy', [
     'copy_img',
-    // 'copy_sass',
+    // 'copy_stylus',
     'copy_lib',
     // 'copy_js',
     'copy_html',
