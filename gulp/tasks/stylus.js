@@ -23,7 +23,7 @@ gulp.task('stylus', function() {
         .src(config.assets.stylus + '/app.styl')
         .pipe(plumber({ errorHandler: config.errorHandler }))
         .pipe(sourcemaps.init())
-        .pipe(stylus({outputStyle: 'expanded',precision: 5}))
+        .pipe(stylus({ outputStyle: 'expanded', precision: 5,'include css': true}))
         // .on('error', config.errorHandler)
         .pipe(autoprefixer({ browsers: ['> 1%', 'last 4 versions'], cascade: false }))
         .pipe(cleanCSS())
