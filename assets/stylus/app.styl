@@ -1,0 +1,207 @@
+@import "helpers/_mixsins"
+@import "helpers/_variables"
+@import "helpers/_reset"
+@import "helpers/_media"
+@import "helpers/_animation"
+@import "helpers/_flex-grid"
+
+body
+    font-family 'Roboto'
+header
+    position fixed
+    top 0
+    left 0
+    z-index 50
+    height 100vh
+    width 15.62vw // ( 300px * 100% ) / 1950(разер экрана)
+    background-color sidebar_bg
+    color sidebar_font
+    box-shadow 9px 0px 13px 0px rgba(70,70,70,0.55)
+
+.st0
+    fill #364048
+.st1
+    fill #364048
+.logo
+    width 100%
+    height 11.57vh
+    background-color #fff
+    svg
+        width 6vw 
+.main_nav
+    a
+        transition all .4s linear
+        text-decoration none
+        color #ffffff
+        text-transform uppercase
+        font-size 0.93vmax // берем по большей грани
+        line-height 1.66vmax
+        height 3.22vmax
+        display flex
+        flex-flow row nowrap
+        justify-content flex-end
+        align-content center
+        background-color #2f373b
+        align-items center
+        background rgb(51,59,63); /* Old browsers */
+        background -moz-linear-gradient(top,  rgba(51,59,63,1) 0%, rgba(46,54,58,1) 98%); /* FF3.6-15 */
+        background -webkit-linear-gradient(top,  rgba(51,59,63,1) 0%,rgba(46,54,58,1) 98%); /* Chrome10-25,Safari5.1-6 */
+        background linear-gradient(to bottom,  rgba(51,59,63,1) 0%,rgba(46,54,58,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        padding-right 1.3vmax
+        // width 100%
+        &:hover
+            background rgb(49,189,187); /* Old browsers */
+            background -moz-linear-gradient(top,  rgba(49,189,187,1) 0%, rgba(24,163,161,1) 79%); /* FF3.6-15 */
+            background -webkit-linear-gradient(top,  rgba(49,189,187,1) 0%,rgba(24,163,161,1) 79%); /* Chrome10-25,Safari5.1-6 */
+            background linear-gradient(to bottom,  rgba(49,189,187,1) 0%,rgba(24,163,161,1) 79%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    .active
+        background rgb(49,189,187); /* Old browsers */
+        background -moz-linear-gradient(top,  rgba(49,189,187,1) 0%, rgba(24,163,161,1) 79%); /* FF3.6-15 */
+        background -webkit-linear-gradient(top,  rgba(49,189,187,1) 0%,rgba(24,163,161,1) 79%); /* Chrome10-25,Safari5.1-6 */
+        background linear-gradient(to bottom,  rgba(49,189,187,1) 0%,rgba(24,163,161,1) 79%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            
+.filter__title
+    color #1ab5b3
+    fill #1ab5b3
+    font-size 0.98vmax
+    padding 1.25vmax
+    text-align right
+    svg
+        margin-left 0.62vmax
+        width 0.9vmax
+        height 0.9vmax
+.filter
+    li
+        width 100%
+        text-align right
+    a
+        font-size 0.67vmax
+        line-height 1.25vmax
+        text-align right
+        padding 0.41vmax 1.25vmax
+        text-decoration none
+        color #616669
+        &:hover
+            color #ffffff
+
+.filter a.active
+    color #ffffff
+    
+.social_bar
+    border-top 1px solid #1e282b
+    padding 1.25vmax
+    // width 100%
+    margin-top 1.25vmax
+    a
+        margin-left 0.52vmax
+            
+    svg
+        width 1.3vmax
+        height 1.3vmax
+        transition all .4s linear
+        &:hover
+            transform scale(1.2)
+.cop
+    text-align right
+    // width 100%
+    font-size 0.62vmax
+    color #6b7772
+    padding-right 1.25vmax
+.main
+    // width 100%
+    min-height 100vh
+    padding-left 15.62vw
+    
+.work_box
+    cover()
+    max-width 21.09vw
+    width 25%
+    height 16.19vw
+    position relative
+    overflow hidden
+    a
+        position absolute
+        z-index 2
+        top 0
+        left 0
+        display flex
+        width 100%
+        height inherit
+        background-color rgba(45,184,185,0.7)
+        opacity 0
+        color #ffffff
+        flex-flow column nowrap
+        justify-content center
+        align-items center
+        text-decoration none
+        transition all .4s linear
+        &:hover
+            opacity 1
+        h2
+            font-size 1.25vw
+            font-weight 400
+            margin-bottom 0.78vw
+        h3
+            font-size 0.62vw
+            font-weight 400
+            &:after
+                content ''
+                width 100%
+                height 1px
+                margin-top 1vw
+                margin-bottom 1vw
+                display block
+                background-color #fff
+    .arrow
+        width 3vw
+        height 3vw
+        fill #fff
+        
+.info
+    z-index 100
+    width 16.7vmax
+    position fixed
+    top 0
+    right -14.6vmax
+    transition all .4s linear
+	.ico
+	    width 2vmax
+	    height 1.7vmax
+	    background-color rgb(45,184,185)
+	    fill #fff
+	    padding 5px
+	    cursor pointer
+    .contact
+		width 14.6vmax
+		height 6.7vmax
+		padding 1vmax
+		background-color rgba(0,0,0,.7)
+		ul
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			flex-flow column nowrap
+			align-content space-between
+			height 100%
+		li
+			color #fff
+			font-size 0.8vmax
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			flex-flow row nowrap
+			margin auto 0
+                     
+			svg
+				margin-right 10px
+				fill #fff
+				width 1vmax
+				height 1vmax
+.open
+    position fixed
+    right 0
+    top 0

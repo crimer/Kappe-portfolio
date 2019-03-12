@@ -1,0 +1,87 @@
+r(width)
+    @media only screen and (max-width: width+ "px")
+        @content 
+    
+coverdiv()
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+    width 100%
+    height 100%
+
+// absolute-all(num)
+//     position absolute
+// 	top num
+// 	bottom num
+// 	right num
+// 	left num
+
+cover()
+    background-repeat no-repeat
+    background-size cover
+    background-position 50% 50%
+
+// vertical-align at center
+vcenter()
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%,-50%)
+
+//simple gradient
+g(color1, color2)
+    background linear-gradient(color1, color2)
+
+// TRANSITION
+tr(what)
+    transition what
+
+rem(size)
+	return (size/16)rem
+
+size(a, b = false)
+	width a
+	if b
+		height b
+	else
+		height a
+
+justify()
+    text-align justify
+    line-height 0
+    font-size 0
+    text-align-last justify
+    &:after
+        content ""
+        display inline-block
+        width 100%
+        height 0px
+        visibility hidden
+        overflow hidden
+    
+vertical()
+    text-align center
+    font-size 0
+    &:before
+        content ""
+        display inline-block
+        vertical-align middle
+        width 0
+        height 100%
+
+clr()
+    &:after
+        content " "
+        display table
+        clear both
+
+rotate(var)
+    transform rotate(var+ "deg")
+
+blur(var)
+    filter blur(var)
+
+// scale(var)
+    // transform scale(var)
