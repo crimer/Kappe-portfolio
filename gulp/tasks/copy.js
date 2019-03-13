@@ -41,7 +41,7 @@ gulp.task('copy', [
     'copy_img',
     // 'copy_stylus',
     'copy_lib',
-    // 'copy_js',
+    'copy_js',
     'copy_html',
     'copy_fonts'
 ]);
