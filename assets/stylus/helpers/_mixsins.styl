@@ -13,16 +13,29 @@ coverdiv()
 
 // absolute-all(num)
 //     position absolute
-// 	top num
-// 	bottom num
-// 	right num
-// 	left num
+//     top num
+//     bottom num
+//     right num
+//     left num
 
-cover()
+cover(image = none)
+    background-image image
     background-repeat no-repeat
     background-size cover
+    -o-background-size cover
+    -moz-background-size cover
+    -webkit-background-size cover
     background-position 50% 50%
-
+    
+// horizontal line
+line(w,h,color)
+    &:after
+        content ''
+        display block
+        width w
+        height h
+        background-color color
+        
 // vertical-align at center
 vcenter()
     position absolute
@@ -34,12 +47,21 @@ vcenter()
 g(color1, color2)
     background linear-gradient(color1, color2)
 
-// TRANSITION
-tr(what)
-    transition what
+tr(what = all, when = 0.25s, how = linear)
+    -webkit-transition what when how
+    -moz-transition what when how
+    -ms-transition what when how
+    -o-transition what when how
+    transition what when how
 
 rem(size)
 	return (size/16)rem
+    
+vw(size)
+    return (size/1920*100)vw
+     
+vh(size)
+    return (size/1920*100)vh 
 
 size(a, b = false)
 	width a
@@ -60,7 +82,7 @@ justify()
         height 0px
         visibility hidden
         overflow hidden
-    
+
 vertical()
     text-align center
     font-size 0
@@ -74,14 +96,17 @@ vertical()
 clr()
     &:after
         content " "
-        display table
+        display block
+        height 0
+        visibility hidden
         clear both
 
 rotate(var)
     transform rotate(var+ "deg")
 
-blur(var)
-    filter blur(var)
+// bluur(var)
+//     filter blur(var)
 
 // scale(var)
-    // transform scale(var)
+//     transform scale(var)
+        

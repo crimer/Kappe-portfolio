@@ -223,34 +223,65 @@ header
 	.left_info
 		border-right 1px solid #e5e5e5
 		.img_box_work
+			position relative
 			width 100%
 			overflow hidden
 			height 29.16vw
 			img
-				width 100%
-				height auto
+                width 100%
+                height auto
+            .slides
+                position relative
+                width 100%
+                height 29.16vw
+                padding 0px
+                margin 0px
+                .slide
+                    position absolute
+                    left 0
+                    top 0
+                    width 100%
+                    opacity 0
+                    z-index 10
+                    transition opacity 1s
+                .showing
+                    opacity 1
+			.controlls
+				position absolute
+				bottom 1.5vw
+				right 1.5vw
+				z-index 15 
+				.square
+                    background-color #B6B6B6
+                    border 1px solid #fff
+                    width 1.1vw
+                    height 0.7vw
+                    transition .4s
+                    margin-right .4vw
+                    &:hover
+                        background-color #40BCBA
+                        border 1px solid #6B6B6B
+				.act
+					background-color #40BCBA
+					border 1px solid #6B6B6B
 		.about_work
-			margin-top 1.3vw
 			border-bottom 1px solid #e5e5e5
-			color #a3a3a3
-			font-size 0.93vw
-			font-weight 400
-			line-height 1.56vw
-			p
-				margin-bottom 2.39vw
-			h1
-				font-size 1.25vw
-				line-height 1.35vw
-				color #000000
-				margin-bottom 1vw
-				font-weight 400
 				
-.project_info__title
+				
+.info__title
+	margin-top 1.3vw
 	font-size 1.25vw
 	line-height 1.35vw
+	font-weight 200
 	color #000000
 	margin-bottom 1vw
-	font-weight 400
+    
+.info__text
+	margin-bottom 2.39vw
+	font-size 0.9vw
+	line-height 1.5vw
+	color #a3a3a3
+             
 	
 .project_info li
 	display -webkit-flex
@@ -299,3 +330,85 @@ header
 			width 0.7vw
 			height 0.7vw
 			fill #a3a3a3
+// ABOUT
+.img_box
+    width 37.5vw
+    height 15.7vw
+    cover()
+
+.who_we_are
+	border-bottom: 1px solid #e5e5e5;
+	color #a3a3a3
+	font-size 0.93vw
+	font-weight 400
+	line-height 1.56vw
+.pictures
+	.block
+		position relative
+		margin-right vw(10)
+		margin-bottom vw(10)
+		
+	img
+		width vw(227)
+.overlay
+	coverdiv()
+	z-index 100
+	background-color rgba(45,184,183,0.8)
+	opacity 0
+	cursor pointer
+	tr()
+	&:hover
+		opacity 1
+	h3
+		margin-top vw(75)
+		text-align center
+		color white
+		font-size vw(16)
+		line-height vw(26)
+		text-transform uppercase
+	p
+		text-align center
+		color white
+		font-size vw(13)
+		line-height vw(26)
+.skils
+	li
+		margin-bottom vw(18)
+		font-size vw(15)
+		color #727272
+		&:last-of-type
+			color #000
+	.progress
+		width 100%
+		height vw(35)
+		border 1px solid #ececec
+		margin-top vw(10)
+		&__bar
+			background-color #e2e2e2
+			height inherit
+.testimonials
+	.top
+		background-color #1ab5b3
+		img
+			width vw(80)
+			height vw(80)
+		p
+			color white
+			padding-left vw(25)
+	.bottom
+		padding vw(30)
+		border 1px solid #ececec
+		border-top none
+		p
+			font-size 0.9vw
+			line-height 1.5vw
+			color #a3a3a3
+.services
+	height 100%
+	ul
+		list-style-type disc !important	
+	li
+		margin-left vw(15)
+		font-size 0.7vw
+		line-height 1.56vw
+		color #a3a3a3

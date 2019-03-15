@@ -1,7 +1,2 @@
-window.onload = function () {
-
-	document.querySelector('#btn_info').addEventListener('click',function  () {
-		document.querySelector('#btn_info').classList.toggle('open');
-	});
-
-}
+"use strict";window.onload=function(){document.querySelector("#btn_info").addEventListener("click",function(){document.querySelector("#btn_info").classList.toggle("open")});var s=document.querySelectorAll("li.slide"),t=document.querySelectorAll(".square"),n=0;function e(e){s[n].className="slide",t[n].className="square",n=(e+s.length)%s.length,s[n].className="slide showing",t[n].className="square act"}$(".square").on("click",function(){$(".act").removeClass("act"),$(this).addClass("act"),e($(this).index())}),setInterval(function(){e(n+1)},3e3),$(".progress__bar").each(function(){var e=$(this).data("skill");$(this).css("width",e+"%")})};
+//# sourceMappingURL=app.js.map
